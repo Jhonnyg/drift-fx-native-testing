@@ -15,7 +15,7 @@ public class App
 {
     static
     {
-        System.loadLibrary("native");
+        System.loadLibrary("native-dynamic");
     }
 
     private native void nativeInit();
@@ -23,5 +23,7 @@ public class App
     public static void main( String[] args )
     {
         System.out.println("Hello from java!");
+
+        new App().nativeInit();
     }
 }

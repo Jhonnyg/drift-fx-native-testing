@@ -12,8 +12,9 @@ extern "C" {
  * Method:    nativeInit
  * Signature: ()V
  */
-JNIEXPORT void JNICALL Java_com_driftfxnative_application_App_nativeInit
-  (JNIEnv *, jobject);
+JNIEXPORT void JNICALL Java_com_driftfxnative_application_App_nativeInit(JNIEnv *, jobject, jobject);
+JNIEXPORT jlong JNICALL Java_com_driftfxnative_application_App_nativeOnStart(JNIEnv *, jobject, jobject, jobject);
+JNIEXPORT void JNICALL Java_com_driftfxnative_application_App_nativeOnRender(JNIEnv *, jobject, long);
 
 #ifdef __cplusplus
 }

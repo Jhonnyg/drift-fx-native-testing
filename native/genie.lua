@@ -6,7 +6,7 @@ solution "solution"
 
     configurations { "Debug", "Release" }
     platforms      { "x64" }
-    flags          { "FatalWarnings", "NoPCH" }
+    flags          { "FatalWarnings", "NoPCH", "Cpp11" }
 
     configuration "Debug"
         defines { "DEBUG" }
@@ -21,7 +21,11 @@ project "native-dynamic"
     kind       ( "SharedLib" )
     targetname ( "native-dynamic" )
     targetdir  ( "build" )
-    files      { "src/native.cpp" }
+    files      {
+        "src/native.cpp",
+        "src/driftcpp.cpp",
+    }
+    links      { "OpenGL.framework" }
 
     includedirs {
         path.join(JAVA_HOME, "include"),

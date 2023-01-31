@@ -43,6 +43,12 @@
         <artifactId>javafx-controls</artifactId>
         <version>19</version>
     </dependency>
+    <dependency>
+       <groupId>org.apache.maven.plugins</groupId>
+       <artifactId>maven-assembly-plugin</artifactId>
+       <version>2.3</version>
+       <type>maven-plugin</type>
+    </dependency>
   </dependencies>
 
   <build>
